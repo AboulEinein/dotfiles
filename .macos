@@ -69,6 +69,8 @@ echo "making system modifications:"
 # General UI/UX                                                               #
 ###############################################################################
 
+echo "Configuring General UI/UX preferences"
+
 # Set computer name (as done via System Preferences → Sharing)
 #sudo scutil --set ComputerName "0x6D746873"
 #sudo scutil --set HostName "0x6D746873"
@@ -174,6 +176,8 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
+echo "Configuring Trackpad, mouse, keyboard, Bluetooth accessories, and input preferences"
+
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
@@ -229,7 +233,7 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 # Date & Time                   	                                      #
 ###############################################################################
 
-echo "Configuring date and time preferences"
+echo "Configuring Date & Tim preferences"
 
 # Show date on the menu bar Sat May 30 2:09 PM
 defaults write com.apple.menuextra.clock DateFormat -string "EEE MMM d  h:mm a"
@@ -237,6 +241,8 @@ defaults write com.apple.menuextra.clock DateFormat -string "EEE MMM d  h:mm a"
 ###############################################################################
 # Energy saving                                                               #
 ###############################################################################
+
+echo "Configuring Energy saving preferences"
 
 # Show Battery percentage
 defaults write com.apple.menuextra.battery ShowPercent YES
@@ -281,6 +287,8 @@ sudo pmset -b sleep 10
 # Screen                                                                      #
 ###############################################################################
 
+echo "Configuring Screen preferences"
+
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
@@ -304,6 +312,8 @@ defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
+
+echo "Configuring Finder prefrences"
 
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
 # defaults write com.apple.finder QuitMenuItem -bool true
@@ -419,6 +429,8 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
+
+echo "Dock, Dashboard, and hot corners preferences"
 
 # Enable highlight hover effect for the grid view of a stack (Dock)
 # defaults write com.apple.dock mouse-over-hilite-stack -bool true
@@ -560,9 +572,9 @@ defaults write com.apple.dock show-recents -bool false
 # defaults write com.apple.Safari ProxiesInBookmarksBar "()"
 
 # Enable the Develop menu and the Web Inspector in Safari
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+# defaults write com.apple.Safari IncludeDevelopMenu -bool true
+# defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+# defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
 # Add a context menu item for showing the Web Inspector in web views
 # defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
@@ -609,6 +621,8 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 ###############################################################################
 # Mail                                                                        #
 ###############################################################################
+
+echo "Configuring Mail prefrences"
 
 # Disable send and reply animations in Mail.app
 # defaults write com.apple.mail DisableReplyAnimations -bool true
@@ -683,6 +697,8 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 # Terminal & iTerm 2                                                          #
 ###############################################################################
 
+echo "Configuring Terminal & iTerm 2 prefrences"
+
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
@@ -743,7 +759,7 @@ defaults write com.apple.terminal StringEncodings -array 4
 # defaults write com.apple.terminal SecureKeyboardEntry -bool true
 
 # Disable the annoying line marks
-defaults write com.apple.Terminal ShowLineMarks -int 0
+# defaults write com.apple.Terminal ShowLineMarks -int 0
 
 # Install the Solarized Dark theme for iTerm
 # open "${HOME}/init/Solarized Dark.itermcolors"
@@ -764,6 +780,8 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 ###############################################################################
 # Activity Monitor                                                            #
 ###############################################################################
+
+echo "Configuring Activity Monitor prefrences"
 
 # Show the main window when launching Activity Monitor
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
@@ -808,6 +826,8 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # Mac App Store                                                               #
 ###############################################################################
 
+echo "Configuring Mac App Store prefrences"
+
 # Enable the WebKit Developer Tools in the Mac App Store
 # defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 
@@ -839,12 +859,16 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # Photos                                                                      #
 ###############################################################################
 
+echo "Configuring Photos prefrences"
+
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 ###############################################################################
 # Messages                                                                    #
 ###############################################################################
+
+echo "Configuring Mac Messages prefrences"
 
 # Disable automatic emoji substitution (i.e. use plain text smileys)
 # defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
@@ -872,8 +896,8 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 # defaults write com.google.Chrome.canary DisablePrintPreview -bool true
 
 # Expand the print dialog by default
-defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
-defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
+# defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
+# defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
 
 ###############################################################################
 # GPGMail 2                                                                   #
