@@ -56,11 +56,11 @@ echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
 
 echo "installing apps with brew cask"
-brew cask install google-chrome firefox\
-iterm2 rectangle gpg-suite 1password fantastical zoomus\
-spotify slack keepingyouawake vlc\
-visual-studio-code sublime-text jetbrains-toolbox\
-postman cyberduck postico github insomnia\
+brew cask install google-chrome firefox \
+iterm2 rectangle gpg-suite 1password fantastical zoomus \
+spotify slack keepingyouawake vlc \
+visual-studio-code sublime-text jetbrains-toolbox \
+postman cyberduck postico github insomnia \
 qlcolorcode qlmarkdown qlstephen quicklook-json 
 
 echo "making system modifications:"
