@@ -58,7 +58,7 @@ echo "npm --version: $(npm --version)"
 echo "installing apps with brew cask"
 brew cask install google-chrome firefox \
 iterm2 rectangle gpg-suite 1password fantastical zoomus \
-spotify slack keepingyouawake vlc \
+spotify keepingyouawake vlc \
 visual-studio-code sublime-text jetbrains-toolbox \
 postman cyberduck postico github insomnia \
 qlcolorcode qlmarkdown qlstephen quicklook-json 
@@ -118,7 +118,7 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
 # Disable the “Are you sure you want to open this application?” dialog
-defaults write com.apple.LaunchServices LSQuarantine -bool false
+# defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
