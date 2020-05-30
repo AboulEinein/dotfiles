@@ -21,12 +21,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo "Hello $(whoami)! Let's get you set up."
 
-echo "mkdir -p ${HOME}/dev-projects"
-mkdir -p "${HOME}/dev-projects"
-
-echo "mkdir -p ${HOME}/work"
-mkdir -p "${HOME}/work"
-
 echo "installing oh my zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -38,6 +32,12 @@ echo "zsh-autosuggestions"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 echo "zsh-syntax-highlighting"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/zsh-syntax-highlighting
+
+echo "mkdir -p ${HOME}/dev-projects"
+mkdir -p "${HOME}/dev-projects"
+
+echo "mkdir -p ${HOME}/work"
+mkdir -p "${HOME}/work"
 
 echo "installing homebrew"
 # install homebrew https://brew.sh
