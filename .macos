@@ -226,11 +226,22 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 25
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
 ###############################################################################
+# Date & Time                   	                                      #
+###############################################################################
+
+echo "Configuring date and time preferences"
+
+# Show date on the menu bar Sat May 30 2:09 PM
+defaults write com.apple.menuextra.clock DateFormat -string "EEE MMM d  h:mm a"
+
+###############################################################################
 # Energy saving                                                               #
 ###############################################################################
 
+# Show Battery percentage
+defaults write com.apple.menuextra.battery ShowPercent YES
 # Enable lid wakeup
-sudo pmset -a lidwake 1
+# sudo pmset -a lidwake 1
 
 # Restart automatically on power loss
 # sudo pmset -a autorestart 1
