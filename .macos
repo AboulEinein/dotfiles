@@ -35,16 +35,13 @@ echo "installing homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "brew installing stuff"
-# imagemagick: eventually I will need this for something
-# ffmpeg: eventually I'll need this for something
-# tree: really handy for listing out directories in text
 brew install imagemagick ffmpeg watchman tree github/gh/gh awscli postgresql
 
 echo "installing nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 
-echo "installing node Dubnium"
-nvm install --lts=Dubnium
+echo "installing node Erbium"
+nvm install --lts=Erbium
 
 echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
