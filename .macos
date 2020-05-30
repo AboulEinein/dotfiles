@@ -59,8 +59,8 @@ echo "installing apps with brew cask"
 brew cask install google-chrome firefox \
 iterm2 rectangle gpg-suite 1password fantastical zoomus \
 spotify keepingyouawake vlc \
-visual-studio-code sublime-text jetbrains-toolbox \
-postman cyberduck postico github insomnia \
+visual-studio-code sublime-text jetbrains-toolbox sourcetree \
+postman cyberduck postico github insomnia docker \
 qlcolorcode qlmarkdown qlstephen quicklook-json 
 
 echo "making system modifications:"
