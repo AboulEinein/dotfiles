@@ -233,7 +233,7 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 # Date & Time                   	                                      #
 ###############################################################################
 
-echo "Configuring Date & Tim preferences"
+echo "Configuring Date & Time preferences"
 
 # Show date on the menu bar Sat May 30 2:09 PM
 defaults write com.apple.menuextra.clock DateFormat -string "EEE MMM d  h:mm a"
