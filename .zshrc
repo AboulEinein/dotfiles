@@ -9,6 +9,7 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 # aliases
 alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
+alias dockspacer="defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock"
 
 # nvm
 export NVM_SYMLINK_CURRENT=true
