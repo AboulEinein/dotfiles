@@ -60,8 +60,7 @@ brew cask install google-chrome firefox \
 iterm2 rectangle gpg-suite 1password fantastical zoomus \
 spotify keepingyouawake vlc \
 visual-studio-code sublime-text jetbrains-toolbox sourcetree \
-postman cyberduck postico github insomnia docker \
-qlcolorcode qlmarkdown qlstephen quicklook-json 
+postman cyberduck postico github insomnia docker
 
 echo "making system modifications:"
 
@@ -193,7 +192,7 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write -g com.apple.swipescrolldirection -bool FALSE
 
 # Increase sound quality for Bluetooth headphones/headsets
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+# defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
@@ -227,7 +226,7 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 25
 # sudo systemsetup -settimezone "Europe/Brussels" > /dev/null
 
 # Stop iTunes from responding to the keyboard media keys
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
 ###############################################################################
 # Date & Time                   	                                      #
