@@ -57,7 +57,7 @@ echo "npm --version: $(npm --version)"
 
 echo "installing apps with brew cask"
 brew cask install google-chrome firefox \
-iterm2 rectangle gpg-suite 1password fantastical zoomus \
+iterm2 rectangle gpg-suite 1password zoomus \
 spotify keepingyouawake vlc \
 visual-studio-code sublime-text jetbrains-toolbox sourcetree \
 postman cyberduck postico github insomnia docker
