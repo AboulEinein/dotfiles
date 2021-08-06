@@ -2,7 +2,7 @@
 
 ## .macos
 Contains installation and configurations for MacOS
-Note: Script will terminate after installing Oh My Zsh, so you'll need to run it again to continue the rest of setup
+Note: Please install Xcode command line tools before running the script `xcode-select --install`
 
 ## .zshrc
 Contains some custom configurations
