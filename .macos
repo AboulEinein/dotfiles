@@ -6,10 +6,10 @@ sudo -v
 echo "Hello $(whoami)! Let's get you set up."
 
 echo "installing nvm"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
-echo "installing node Erbium"
-nvm install --lts=Erbium
+echo "installing node Gallium"
+nvm install -lts/gallium
 
 echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
@@ -26,7 +26,7 @@ brew install --cask google-chrome firefox \
 iterm2 rectangle gpg-suite 1password zoomus \
 spotify keepingyouawake vlc \
 visual-studio-code sublime-text jetbrains-toolbox sourcetree \
-postico github insomnia docker figma cyberduck
+postico github postman docker figma cyberduck
 
 echo "installing oh my zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
